@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Evento, NewsResponse } from 'src/app/interfaces';
 import { EventosService } from 'src/app/services/eventos.service';
 
 @Component({
@@ -8,11 +9,14 @@ import { EventosService } from 'src/app/services/eventos.service';
 })
 export class Tab1Page implements OnInit {
 
+  public eventos: Evento[]=[];
+
   constructor(private eventosService:EventosService) {}
 
   ngOnInit() {
    this.eventosService.getEventitos().subscribe(resp=>{
-    console.log(resp)
+    console.log(resp.eventos);
+    this.eventos=resp.eventos;
    })
     
   }
