@@ -27,7 +27,7 @@
         <ion-title class="ion-padding-horizontal ion margin-bottom">
           {{evento.comentario}}
         </ion-title>
-        <p>{{evento.imagen}}</p>
+        <ion-img [src]="evento.imagen" (click)="openArticle()"></ion-img>
         <p>{{evento.fecha}}</p>
       </ion-card>
     </ion-col>
