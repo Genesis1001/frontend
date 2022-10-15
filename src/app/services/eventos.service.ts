@@ -9,6 +9,6 @@ export class EventosService {
   constructor(private http:HttpClient) { }
 
   getEventitos(){
-    return this.http.get('https://backend-eventos.herokuapp.com')
+    return this.http.get('https://backend-eventos.herokuapp.com/evento')
   }
 }
