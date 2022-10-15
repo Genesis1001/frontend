@@ -20,9 +20,6 @@ export class Tab1Page implements OnInit {
    })
     
   }
-    openArticle(){
-    const browser = this.iab.create(this.evento.imagen);
-    browser.show();
-  }
+
 
 }
